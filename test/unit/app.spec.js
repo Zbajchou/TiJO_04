@@ -35,4 +35,45 @@ describe('app', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
     });
+
+    describe('DescendingNumbers function',function(){
+        it('should return false when numberFrom is smaller numberTo', function () {
+            expect(app.getDescendingNumbers(11, 12)).toEqual(false);
+        });
+        it('should return false when numberFrom is equal numberTo', function () {
+            expect(app.getDescendingNumbers(11, 11)).toEqual(false);
+        });
+        it('should return false when numberFrom is not a number', function () {
+            expect(app.getDescendingNumbers('string', 11)).toEqual(false);
+        });
+        it('should return false when numberTo is not a number', function () {
+            expect(app.getDescendingNumbers(11, 'string')).toEqual(false);
+        });
+        it('should return string when numberFrom is greater than numberTo', function () {
+            expect(app.getDescendingNumbers(11, 1)).toEqual('11 10 9 8 7 6 5 4 3 2 1');
+        });
+    });
+    describe('Area of trapezoid function', function(){
+        it('should return false when a is smaller than 0', function () {
+            expect(app.areaOfTrapezoid(-1,1,2)).toEqual(false);
+        });
+        it('should return false when b is smaller than 0', function () {
+            expect(app.areaOfTrapezoid(1,-1,2)).toEqual(false);
+        });
+        it('should return false when h is smaller than 0', function () {
+            expect(app.areaOfTrapezoid(1,1,-1)).toEqual(false);
+        });
+        it('should return false when a is not a number', function () {
+            expect(app.areaOfTrapezoid('string',1,2)).toEqual(false);
+        });
+        it('should return false when d is not a number', function () {
+            expect(app.areaOfTrapezoid(1,'string',2)).toEqual(false);
+        });
+        it('should return false when h is not a number', function () {
+            expect(app.areaOfTrapezoid(1,1,'string')).toEqual(false);
+        });
+        it('should equal a area of trapezoid', function () {
+            expect(app.areaOfTrapezoid(2,4,4)).toEqual(12);
+        });
+    });
 });
