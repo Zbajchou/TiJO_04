@@ -76,4 +76,27 @@ describe('app', function () {
             expect(app.areaOfTrapezoid(2,4,4)).toEqual(12);
         });
     });
+    describe('Max array function', function(){
+        it('should return false when array contains not a numer', function () {
+            expect(app.maxArray([1,'asd',3,2,1,1])).toEqual(false);
+        });
+        it('should return max number contain in array', function () {
+            expect(app.maxArray([1,'asd',3,2,1,1])).toEqual(false);
+        });
+        it('should return false when array is empty', function () {
+            expect(app.maxArray([])).toEqual(fasle);
+        });
+    });
+
+    describe('Square Odd function', function(){
+        it('should return false when array contains not a numer', function () {
+            expect(app.squareOdd([1,'asd',3,2,1,1])).toEqual(false);
+        });
+        it('should return max number contain in array', function () {
+            expect(app.squareOdd([1,'asd',3,2,1,1])).toEqual(false);
+        });
+        it('should return false when array is empty', function () {
+            expect(app.squareOdd([])).toEqual(fasle);
+        });
+    });
 });
